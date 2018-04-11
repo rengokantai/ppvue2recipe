@@ -20,3 +20,10 @@ wrap:function(value,begin,end){   //3 param
   return begin+value+end;
 }
 ```
+## 2. Computed Properties, Filters, and Conditionals
+### 1 Filtering a List Using a Component Property
+```
+remove(todo){
+  this.todoItems = this.todoItems.filter(item=>item!=todo);
+}
+```
