@@ -21,9 +21,29 @@ wrap:function(value,begin,end){   //3 param
 }
 ```
 ## 2. Computed Properties, Filters, and Conditionals
-### 1 Filtering a List Using a Component Property
+### 1 Filtering a List Using a Computed Property
 ```
 remove(todo){
   this.todoItems = this.todoItems.filter(item=>item!=todo);
+}
+```
+
+
+### 2 Sorting a List Using a Computed Property
+```
+sortedUsers(){
+  if(!this.sortingKey){
+    return this.users;
+  }
+  return this.users.concat().sort((userA,userB)=>{
+    if(userA[this.sortingKey]>userB[this.sortingKey]){
+      return 1;
+    }
+    if(userA[this.sortingKey]<userB[this.sortingKey]){
+      return -1;
+    }
+    return 0;
+  });
+  }
 }
 ```
