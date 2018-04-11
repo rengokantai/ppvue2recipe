@@ -58,3 +58,4 @@ filters:{
   }
 }
 ```
+### Working on Dates with Filters and MomentJS
