@@ -47,3 +47,14 @@ sortedUsers(){
   }
 }
 ```
+### Currency
+```
+filters:{
+  currency(value,options){
+    if(!value){
+      return '';
+    }
+    return formatMoney(value,options);
+  }
+}
+```
